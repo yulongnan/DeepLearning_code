@@ -27,3 +27,14 @@ def Get_weightFile():
     return file_weight_pth[0]
 
 print(Get_weightFile())
+
+
+# #------------------------------------------------------#
+#   权值文件请看README，百度网盘下载
+#------------------------------------------------------#
+Flag_interrupt = 1; #中断后继续训练=设置为1
+if ~ Flag_interrupt: 
+    model_path = 'model_data/voc_weights_resnet.pth'
+else:
+    model_path = Get_weightFile
+    print('model_path', model_path)
